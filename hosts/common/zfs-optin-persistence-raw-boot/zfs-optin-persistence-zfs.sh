@@ -5,6 +5,9 @@ set –e
 # dataset_boot="bpool/nixos"
 # dataset_boot_root="${dataset_boot}/root"
 
+BOOT_PARTITION="$DISK-part1"
+ZFS_PARTITION="$DISK-part2"
+
 datasets_base="rpool/nixos"
 dataset_local="${datasets_base}/local"
 dataset_persist="${datasets_base}/persist"
@@ -43,9 +46,9 @@ mkdir /mnt/nix
 mount $BOOT_PARTITION /mnt/boot
 mount -t zfs "${dataset_nix}" /mnt/nix
 
-rpool
-rpool/nixos
-rpool/nixos/local
-rpool/nixos/local/nix
-rpool/nixos/local/root
-rpool/nixos/persist
+# rpool
+# rpool/nixos
+# rpool/nixos/local
+# rpool/nixos/local/nix
+# rpool/nixos/local/root
+# rpool/nixos/persist

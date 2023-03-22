@@ -31,6 +31,7 @@ mkswap "${DISK}-part4"
 swapon "${DISK}-part4"
 
 mkfs.fat -F 32 $BOOT_PARTITION
+
 # parted $BOOT_PARTITION set 1 boot on
 
 zpool create \

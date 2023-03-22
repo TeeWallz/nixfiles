@@ -13,7 +13,7 @@ cd /tmp/nixfiles-master
 
 export DISK='/dev/disk/by-id/ata-QEMU_HARDDISK_QM00003'
 export INST_PARTSIZE_SWAP=4
-./hosts/common/zfs-optin-persistence/zfs-optin-persistence.sh 
+./hosts/common/zfs-optin-persistence-raw-boot/zfs-optin-persistence-zfs.sh
 
 nixos-install --flake .#zamorak
 
