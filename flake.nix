@@ -80,7 +80,11 @@
         ./hosts/NixyServer.host.nix
       ];
 
-        hosts.zamorak.modules = suites.desktopModules ++ [
+      # hosts.zamorak.modules = suites.desktopModules ++ [
+      #   ./hosts/zamorak.host.nix
+      # ];
+      
+      hosts.zamorak.modules = [
         ./hosts/zamorak.host.nix
       ];
 

@@ -1,8 +1,4 @@
-
-```
-<!-- nix-shell -p gitMinimal nano -->
-<!-- git clone https://github.com/TeeWallz/nixfiles.git -->
-<!-- cd nixfiles -->
+#!/usr/bin/env
 
 sudo su
 
@@ -16,6 +12,3 @@ export INST_PARTSIZE_SWAP=4
 ./hosts/common/zfs-optin-persistence/zfs-optin-persistence.sh 
 
 nixos-install --flake .#zamorak
-
-```
-
