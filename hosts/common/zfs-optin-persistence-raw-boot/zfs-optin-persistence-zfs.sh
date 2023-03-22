@@ -14,7 +14,7 @@ dataset_root="${dataset_local}/root"
 # dataset_home="{$dataset_persist}/home"
 
 
-echo "Creating ZFS root dataset"
+echo "Creating ZFS root dataset without encryption"
 # Create base dataset with encryption
 # zfs create \
 #     -o canmount=off -o mountpoint=none -o encryption=on \
