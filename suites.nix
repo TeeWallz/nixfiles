@@ -8,11 +8,11 @@ let
 
     ./config/aarch64Dev.nix
     ./config/base-desktop.nix
-    ./config/cli-extras.nix
+    # ./config/cli-extras.nix
     ./config/cli.nix
-    ./config/containers.nix
-    ./config/dev.nix
-    ./config/personal.nix
+    # ./config/containers.nix
+    # ./config/dev.nix
+    # ./config/personal.nix
     ./config/sway.nix
     ./config/xorg.nix
   ];
@@ -32,7 +32,7 @@ let
   desktopModules = with nixosModules; [
     base-desktop
     cli
-    cli-extras
+    # cli-extras
     #./hosts/work/i3
     sway
     ({ pkgs, lib, config, ... }: {
