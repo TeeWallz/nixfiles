@@ -31,9 +31,9 @@ mkswap "${DISK}-part4"
 swapon "${DISK}-part4"
 
 mkfs.fat -F 32 $BOOT_PARTITION
-parted $BOOT_PARTITION set 1 boot on
+# parted $BOOT_PARTITION set 1 boot on
 
-zpool create \
+echo "ThisIsMyPassword" | zpool create \
     -o ashift=12 -o autotrim=on -m none  -O acltype=posixacl -O canmount=off \
     -O compression=zstd -O dnodesize=auto  -O normalization=formD \
     -O relatime=on -O xattr=sa rpool $ZFS_PARTITION
