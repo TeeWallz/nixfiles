@@ -80,6 +80,10 @@
         ./hosts/NixyServer.host.nix
       ];
 
+        hosts.zamorak.modules = suites.desktopModules ++ [
+        ./hosts/zamorak.host.nix
+      ];
+
       sharedOverlays = [
         self.overlay
         nix2vim.overlay
