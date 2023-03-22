@@ -12,7 +12,7 @@ let
     ./config/cli.nix
     # ./config/containers.nix
     # ./config/dev.nix
-    # ./config/personal.nix
+    ./config/personal.nix
     ./config/sway.nix
     ./config/xorg.nix
   ];
@@ -21,7 +21,7 @@ let
     clean-home
     runtimes
     nix-compose
-    # personal
+    personal
 
     #utils.nixosModules.saneFlakeDefaults
     {

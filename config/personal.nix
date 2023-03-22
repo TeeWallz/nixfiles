@@ -7,13 +7,12 @@
 
   nix.settings.trusted-users = [ "gytis" ];
 
-  users.users.gytis = {
+  users.extraUsers.gytis = {
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "Gytis Ivaskevicius";
     extraGroups = [ "audio" "video" "dialout" "adbusers" "wheel" "networkmanager" "docker" "vboxusers" ];
     initialPassword = "toor";
-    group = "gytis";
   };
 
   users.extraUsers.guest = {
