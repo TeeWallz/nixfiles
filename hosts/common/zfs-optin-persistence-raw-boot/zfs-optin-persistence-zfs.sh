@@ -16,9 +16,11 @@ dataset_root="${dataset_local}/root"
 
 echo "Creating ZFS root dataset"
 # Create base dataset with encryption
+# zfs create \
+#     -o canmount=off -o mountpoint=none -o encryption=on \
+#     -o keylocation=prompt -o keyformat=passphrase $datasets_base
 zfs create \
-    -o canmount=off -o mountpoint=none -o encryption=on \
-    -o keylocation=prompt -o keyformat=passphrase $datasets_base
+    -o canmount=off -o mountpoint=none $datasets_base
 
 echo "Creating sub datasets"
 # Create root datasets
@@ -40,3 +42,10 @@ mkdir /mnt/nix
 # mount -t zfs "${dataset_boot_root}" /mnt/boot
 mount $BOOT_PARTITION /mnt/boot
 mount -t zfs "${dataset_nix}" /mnt/nix
+
+rpool
+rpool/nixos
+rpool/nixos/local
+rpool/nixos/local/nix
+rpool/nixos/local/root
+rpool/nixos/persist
