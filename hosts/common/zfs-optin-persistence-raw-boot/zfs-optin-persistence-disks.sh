@@ -27,8 +27,8 @@ sync && udevadm settle && sleep 3                       # Wait for all disk task
 
 # Activate swap - TODO - Why cryptswap open?
 cryptsetup open --type plain --key-file /dev/random "${DISK}-part4"
-mkswap "${DISK}-part4"
-swapon "${DISK}-part4"
+mkswap "${DISK}-part3"
+swapon "${DISK}-part3"
 
 mkfs.fat -F 32 $BOOT_PARTITION
 
