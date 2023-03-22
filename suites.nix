@@ -21,7 +21,7 @@ let
     clean-home
     runtimes
     nix-compose
-    personal
+    # personal
 
     #utils.nixosModules.saneFlakeDefaults
     {
