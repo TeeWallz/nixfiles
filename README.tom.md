@@ -19,3 +19,4 @@ nixos-install --flake .#zamorak
 
 ```
 
+curl -s https://raw.githubusercontent.com/TeeWallz/nixfiles/master/rollout.sh | bash
