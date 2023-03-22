@@ -1,0 +1,14 @@
+
+```
+nix-shell -p gitMinimal nano
+git clone https://github.com/TeeWallz/nixfiles.git
+cd nixfiles
+
+sudo su
+export DISK='/dev/disk/by-id/ata-QEMU_HARDDISK_QM00003'
+export INST_PARTSIZE_SWAP=4
+./hosts/common/zfs-optin-persistence/zfs-optin-persistence.sh 
+
+nixos-install --flake .#zamorak
+
+```
