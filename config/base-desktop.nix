@@ -62,7 +62,7 @@
     #kernelParams = [ "quiet" "loglevel=3" ];
     kernelParams = [ "nvme_core.default_ps_max_latency_us=0" ];
     cleanTmpDir = true;
-    loader.systemd-boot.enable = true;
+    # loader.systemd-boot.enable = true;
     loader.timeout = 2;
     tmpOnTmpfs = true;
   };
