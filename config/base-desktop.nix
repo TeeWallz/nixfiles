@@ -83,10 +83,10 @@
 
   zramSwap.enable = true;
 
-  fonts = {
-    enableDefaultFonts = true;
-    fonts = [ pkgs.nerdfonts ];
-  };
+  # fonts = {
+  #   enableDefaultFonts = true;
+  #   fonts = [ pkgs.nerdfonts ];
+  # };
 
 
   security.rtkit.enable = true;

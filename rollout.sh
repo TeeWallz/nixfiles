@@ -16,3 +16,5 @@ cat /proc/mounts | grep "rpool\|boot"
 echo ""
 
 nixos-install --flake .#zamorak
+
+zpool export rpool
