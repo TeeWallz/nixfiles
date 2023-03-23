@@ -4,7 +4,7 @@
   boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "usb_storage" "usb_storage" "nvme" "sd_mod" "sdhci_pci" "rtsx_usb_sdmmc" ];
   boot.kernelModules = [ "kvm-intel" ];
 
-  fileSystemSystems."/" = { device = "rpool/nixos/local/root"; fsType = "zfs"; };
+  fileSystems."/" = { device = "rpool/nixos/local/root"; fsType = "zfs"; };
   fileSystems."/nix" = { device = "rpool/nixos/local/nix"; fsType = "zfs"; };
   # fileSystems."/home" = { device = "zroot/locker/home"; fsType = "zfs"; };
 
