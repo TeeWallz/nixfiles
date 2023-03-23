@@ -24,7 +24,7 @@
   #     "cp -r " + config.boot.loader.efi.efiSysMountPoint + "/EFI" + " "
   #     + zfsRoot.mirroredEfi + diskName + zfsRoot.partitionScheme.efiBoot + "\n")
   #     (tail zfsRoot.bootDevices)));
-  boot.loader.grub.devices.diskName =[ "/dev/disk/by-id/ata-QEMU_HARDDISK_QM00003"];
+  boot.loader.grub.devices = [ "/dev/disk/by-id/ata-QEMU_HARDDISK_QM00003"];
     # (map (diskName: zfsRoot.devNodes + diskName) zfsRoot.bootDevices);
 
 }
